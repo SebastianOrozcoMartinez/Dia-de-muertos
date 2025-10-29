@@ -8,6 +8,11 @@ body {
   text-align: center;
 }
 
+.container h1,
+.container p {
+  text-shadow: 0 0 10px #f8e546, 0 0 20px #f8e546, 0 0 30px #f8e546;
+}
+
 .altar-level {
   border: 3px solid #6a1b9a; /* Darker purple border */
   border-radius: 20px 20px 0 0;
