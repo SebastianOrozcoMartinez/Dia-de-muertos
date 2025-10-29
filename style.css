@@ -4,6 +4,10 @@ body {
   color: #f0f0f0; /* Light text */
 }
 
+.container {
+  text-align: center;
+}
+
 .altar-level {
   border: 3px solid #6a1b9a; /* Darker purple border */
   border-radius: 20px 20px 0 0;
