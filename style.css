@@ -2,21 +2,18 @@ body {
   background-color: #2c003e; /* Deep purple */
   font-family: 'Poppins', sans-serif;
   color: #f0f0f0; /* Light text */
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .altar-level {
   border: 3px solid #6a1b9a; /* Darker purple border */
   border-radius: 20px 20px 0 0;
   margin: 1rem auto;
-  transition: box-shadow 0.5s ease, transform 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   background-color: #4a148c; /* Medium purple */
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  min-height: 80px; /* Base height when collapsed */
-  padding-bottom: 1rem;
 }
 
 .altar-level::before {
@@ -30,13 +27,11 @@ body {
   background: radial-gradient(circle, #ff8f00 0%, #e65100 100%); /* Orange glow */
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(255, 143, 0, 0.8);
-  transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 
 .altar-level:hover {
-  box-shadow: 0 10px 30px rgba(255, 143, 0, 0.5);
-  transform: translateY(-10px) scale(1.02);
-  animation: pulse 1.5s infinite;
+  transform: translateY(-5px) scale(1.01);
+  animation: pulse 2s infinite;
 }
 
 .altar-tier-1 {
@@ -71,13 +66,36 @@ body {
   }
 }
 
-.accordion-button::after {
-  display: none;
+.accordion-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #f0f0f0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
 }
-.accordion-button { background: none; border: none; box-shadow: none; transition: background-color 0.5s ease, color 0.5s ease; color: #f0f0f0; }
-.accordion-collapse { background-color: #1a002a; /* Very dark purple, almost black */ border-top: 2px solid #ab47bc; overflow: hidden; transition: background-color 0.5s ease, border-color 0.5s ease; }
-.accordion-body { color: #f0f0f0; }
-.level-title { font-size: 1.5rem; font-weight: bold; color: #e0b0ff; /* Lighter purple for title */ transition: color 0.5s ease; }
+
+.accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-body {
+  padding: 1rem;
+  color: #f0f0f0;
+  background-color: #1a002a;
+}
+
+.level-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e0b0ff; /* Lighter purple for title */
+}
 
 /* Decorations */
 .marigold-line {
@@ -97,28 +115,12 @@ body {
   background-position: center;
 }
 
-/* Flicker-in-glow Animation */
-.text-flicker-in-glow {
-  animation: text-flicker-in-glow 4s linear infinite both;
-}
-
-@keyframes text-flicker-in-glow {
-  0%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 30px #f8e546, 0 0 50px #f8e546, 0 0 70px #f8e546, 0 0 90px #f8e546, 0 0 120px #f8e546;
-  }
-  50% {
-    opacity: 0.8;
-    text-shadow: 0 0 10px #f8e546, 0 0 20px #f8e546, 0 0 30px #f8e546, 0 0 40px #f8e546, 0 0 50px #f8e546;
-  }
-}
-
 @keyframes pulse {
   0% {
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   }
   50% {
-    box-shadow: 0 10px 30px rgba(255, 143, 0, 0.7);
+    box-shadow: 0 6px 20px rgba(255, 143, 0, 0.5);
   }
   100% {
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);

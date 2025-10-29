@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Altar Digital - Maestra Cuquita</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -15,35 +11,21 @@
       <h1 class="mb-4 fw-bold" style="color: #f8e546">
         Altar Digital de la Maestra Cuquita
       </h1>
-      <p class="mb-5 text-flicker-in-glow" style="color: #f8e546">
+      <p class="mb-5" style="color: #f8e546">
         Un homenaje en línea que celebra su vida y memoria.
       </p>
 
-      <div
-        class="accordion d-flex flex-column align-items-center"
-        id="altarAccordion"
-      >
+      <div class="accordion">
         <!-- Nivel 1 -->
         <div class="marigold-line"><span></span><span></span><span></span></div>
-        <div
-          class="altar-level altar-tier-1"
-          data-bs-toggle="collapse"
-          data-bs-target="#nivel1"
-        >
-          <div class="accordion-item border-0 w-100">
+        <div class="altar-level altar-tier-1">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed w-100 justify-content-center"
-                type="button"
-              >
+              <button class="accordion-button" type="button">
                 <span class="level-title">Nivel 1: Espíritu</span>
               </button>
             </h2>
-            <div
-              id="nivel1"
-              class="accordion-collapse collapse"
-              data-bs-parent="#altarAccordion"
-            >
+            <div class="accordion-collapse">
               <div class="accordion-body">
                 <p>
                   [Aquí va una biografía corta o descripción espiritual de la
@@ -58,25 +40,14 @@
         <div class="marigold-line">
           <span></span><span></span><span></span><span></span>
         </div>
-        <div
-          class="altar-level altar-tier-2"
-          data-bs-toggle="collapse"
-          data-bs-target="#nivel2"
-        >
-          <div class="accordion-item border-0 w-100">
+        <div class="altar-level altar-tier-2">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed w-100 justify-content-center"
-                type="button"
-              >
+              <button class="accordion-button" type="button">
                 <span class="level-title">Nivel 2: Ofrendas</span>
               </button>
             </h2>
-            <div
-              id="nivel2"
-              class="accordion-collapse collapse"
-              data-bs-parent="#altarAccordion"
-            >
+            <div class="accordion-collapse">
               <div class="accordion-body">
                 <p>[Comida, bebidas, objetos o pasatiempos favoritos.]</p>
               </div>
@@ -88,25 +59,14 @@
         <div class="marigold-line">
           <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div
-          class="altar-level altar-tier-3"
-          data-bs-toggle="collapse"
-          data-bs-target="#nivel3"
-        >
-          <div class="accordion-item border-0 w-100">
+        <div class="altar-level altar-tier-3">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed w-100 justify-content-center"
-                type="button"
-              >
+              <button class="accordion-button" type="button">
                 <span class="level-title">Nivel 3: Recuerdos</span>
               </button>
             </h2>
-            <div
-              id="nivel3"
-              class="accordion-collapse collapse"
-              data-bs-parent="#altarAccordion"
-            >
+            <div class="accordion-collapse">
               <div class="accordion-body">
                 <p>[Imágenes, anécdotas o mensajes de familiares y amigos.]</p>
               </div>
@@ -119,25 +79,14 @@
           <span></span><span></span><span></span><span></span><span></span
           ><span></span>
         </div>
-        <div
-          class="altar-level altar-tier-4"
-          data-bs-toggle="collapse"
-          data-bs-target="#nivel4"
-        >
-          <div class="accordion-item border-0 w-100">
+        <div class="altar-level altar-tier-4">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed w-100 justify-content-center"
-                type="button"
-              >
+              <button class="accordion-button" type="button">
                 <span class="level-title">Nivel 4: Personal</span>
               </button>
             </h2>
-            <div
-              id="nivel4"
-              class="accordion-collapse collapse"
-              data-bs-parent="#altarAccordion"
-            >
+            <div class="accordion-collapse">
               <div class="accordion-body">
                 <p>
                   [Espacio libre para incluir lo que desees: pensamientos, notas
@@ -150,15 +99,17 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-      document.querySelectorAll(".altar-level").forEach((altar) => {
-        altar.addEventListener("click", function (e) {
-          if (!e.target.closest(".accordion-button")) {
-            const button = this.querySelector(".accordion-button");
+      document.querySelectorAll(".accordion-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const accordionCollapse = button.parentElement.nextElementSibling;
 
-            button.click();
+          button.classList.toggle("active");
+
+          if (button.classList.contains("active")) {
+            accordionCollapse.style.maxHeight = accordionCollapse.scrollHeight + "px";
+          } else {
+            accordionCollapse.style.maxHeight = 0;
           }
         });
       });
