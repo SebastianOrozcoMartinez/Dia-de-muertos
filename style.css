@@ -34,8 +34,9 @@ body {
 }
 
 .altar-level:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 143, 0, 0.5);
+  transform: translateY(-10px) scale(1.02);
+  animation: pulse 1.5s infinite;
 }
 
 .altar-tier-1 {
@@ -49,6 +50,25 @@ body {
 }
 .altar-tier-4 {
   width: 90%;
+}
+
+@media (max-width: 768px) {
+  .altar-tier-1 {
+    width: 60%;
+  }
+  .altar-tier-2 {
+    width: 70%;
+  }
+  .altar-tier-3 {
+    width: 80%;
+  }
+  .altar-tier-4 {
+    width: 90%;
+  }
+
+  .level-title {
+    font-size: 1.2rem; /* Slightly smaller font for smaller screens */
+  }
 }
 
 .accordion-button::after {
@@ -75,4 +95,32 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Flicker-in-glow Animation */
+.text-flicker-in-glow {
+  animation: text-flicker-in-glow 4s linear infinite both;
+}
+
+@keyframes text-flicker-in-glow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 30px #f8e546, 0 0 50px #f8e546, 0 0 70px #f8e546, 0 0 90px #f8e546, 0 0 120px #f8e546;
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #f8e546, 0 0 20px #f8e546, 0 0 30px #f8e546, 0 0 40px #f8e546, 0 0 50px #f8e546;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(255, 143, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
 }
