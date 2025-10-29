@@ -1,109 +1,166 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Altar del Día de Muertos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altar Digital - Maestra Cuquita</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #fff7f2;
-        color: #222;
-      }
-      header {
-        text-align: center;
-        padding: 20px;
-        background: linear-gradient(135deg, #002f8f, #005fff);
-        color: #fff;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 28px;
-      }
-      .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        border-color: #002f8f;
-        border-width: 15px;
-      }
-      section {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: #ffffff;
-        border-radius: 12px;
-      }
-      h2 {
-        margin-top: 0;
-        color: #005fff;
-      }
-      p {
-        line-height: 1.6;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-      }
-      .gallery img {
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-      }
-      footer {
-        text-align: center;
-        font-size: 13px;
-        color: #666;
-        margin: 20px 0;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Altar en honor a la Maestra Cuquita</h1>
-      <p>lorem</p>
-    </header>
+    <div class="container py-5 text-center">
+      <h1 class="mb-4 fw-bold" style="color: #f8e546">
+        Altar Digital de la Maestra Cuquita
+      </h1>
+      <p class="mb-5">Un homenaje en línea que celebra su vida y memoria.</p>
 
-
-
-      <section>
-        <h2>Descripción del altar</h2>
-        <p>
-          [Explica los niveles del altar, qué objetos colocaste y qué
-          significan. Ejemplo: “El altar tiene tres niveles, representando
-          cielo, tierra y purgatorio. Incluye fotografías, velas para guiar su
-          camino, cempasúchil que ilumina, y pan de muerto como ofrenda.”]
-        </p>
-      </section>
-
-      <section>
-        <h2>Símbolos</h2>
-        <ul>
-          <li>Fotografía del difunto</li>
-          <li>Flores de cempasúchil</li>
-          <li>Velas e incienso</li>
-          <li>Comida favorita y pan de muerto</li>
-          <li>Papel picado</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Galería</h2>
-        <div class="gallery">
-          <img src="altar.jpg" alt="Foto del altar" />
-          <img src="ofrenda.jpg" alt="Ofrenda detalle" />
+      <div
+        class="accordion d-flex flex-column align-items-center"
+        id="altarAccordion"
+      >
+        <!-- Nivel 1 -->
+        <div class="marigold-line"><span></span><span></span><span></span></div>
+        <div
+          class="altar-level altar-tier-1"
+          data-bs-toggle="collapse"
+          data-bs-target="#nivel1"
+        >
+          <div class="accordion-item border-0 w-100">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed w-100 justify-content-center"
+                type="button"
+              >
+                <span class="level-title">Nivel 1: Espíritu</span>
+              </button>
+            </h2>
+            <div
+              id="nivel1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#altarAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  [Aquí va una biografía corta o descripción espiritual de la
+                  persona.]
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p style="font-size: 13px; color: #666">
-          (Reemplaza estas imágenes con tus fotos reales)
-        </p>
-      </section>
-    </main>
 
-    <footer>Página de exposición del grupo de 3ro — Día de Muertos.</footer>
+        <!-- Nivel 2 -->
+        <div class="marigold-line">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div
+          class="altar-level altar-tier-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#nivel2"
+        >
+          <div class="accordion-item border-0 w-100">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed w-100 justify-content-center"
+                type="button"
+              >
+                <span class="level-title">Nivel 2: Ofrendas</span>
+              </button>
+            </h2>
+            <div
+              id="nivel2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#altarAccordion"
+            >
+              <div class="accordion-body">
+                <p>[Comida, bebidas, objetos o pasatiempos favoritos.]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nivel 3 -->
+        <div class="marigold-line">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div
+          class="altar-level altar-tier-3"
+          data-bs-toggle="collapse"
+          data-bs-target="#nivel3"
+        >
+          <div class="accordion-item border-0 w-100">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed w-100 justify-content-center"
+                type="button"
+              >
+                <span class="level-title">Nivel 3: Recuerdos</span>
+              </button>
+            </h2>
+            <div
+              id="nivel3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#altarAccordion"
+            >
+              <div class="accordion-body">
+                <p>[Imágenes, anécdotas o mensajes de familiares y amigos.]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nivel 4 -->
+        <div class="marigold-line">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span>
+        </div>
+        <div
+          class="altar-level altar-tier-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#nivel4"
+        >
+          <div class="accordion-item border-0 w-100">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed w-100 justify-content-center"
+                type="button"
+              >
+                <span class="level-title">Nivel 4: Personal</span>
+              </button>
+            </h2>
+            <div
+              id="nivel4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#altarAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  [Espacio libre para incluir lo que desees: pensamientos, notas
+                  personales, etc.]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.querySelectorAll(".altar-level").forEach((altar) => {
+        altar.addEventListener("click", function (e) {
+          if (!e.target.closest(".accordion-button")) {
+            const button = this.querySelector(".accordion-button");
+
+            button.click();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
+
