@@ -4,50 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Altar Digital - Maestra Cuquita</title>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="preload" href="./static/marygold.webp" as="image" />
     <style>
-      body{background-color:#2c003e;font-family:'Poppins',sans-serif;color:#f0f0f0}.container{text-align:center}.container h1,.container p{text-shadow:0 0 10px #f8e546,0 0 20px #f8e546,0 0 30px #f8e546}.altar-level{border:3px solid #6a1b9a;border-radius:20px 20px 0 0;margin:1rem auto;transition:transform .3s ease,background-color .3s ease;background-color:#4a148c;box-shadow:0 4px 15px rgba(0,0,0,0.4);cursor:pointer;position:relative;overflow:hidden}.altar-level::before{content:'';position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:40px;height:20px;background:radial-gradient(circle,#ff8f00 0,#e65100 100%);border-radius:50%;box-shadow:0 0 20px rgba(255,143,0,0.8)}.altar-tier-1{width:45%}.accordion-button{background:0;border:0;box-shadow:none;color:#f0f0f0;width:100%;text-align:center;padding:1rem;font-size:1.5rem;font-weight:bold;cursor:pointer}.level-title{font-size:1.5rem;font-weight:bold;color:#e0b0ff}.marigold-line{display:flex;justify-content:center;margin-bottom:.5rem}.marigold-line span{display:inline-block;margin:0 5px;width:20px;height:20px;background-image:url("./static/marygold.webp");background-size:contain;background-repeat:no-repeat;background-position:center}.accordion-body{text-align:left}
-.accordion-collapse {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
+      body {
+        background-color: #2c003e;
+        font-family: "Poppins", sans-serif;
+        color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+      }
+      .container h1,
+      .container p {
+        text-shadow:
+          0 0 10px #f8e546,
+          0 0 20px #f8e546,
+          0 0 30px #f8e546;
+      }
+      .altar-level {
+        border: 3px solid #6a1b9a;
+        border-radius: 20px 20px 0 0;
+        margin: 1rem auto;
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease;
+        background-color: #4a148c;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .altar-level::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 20px;
+        background: radial-gradient(circle, #ff8f00 0, #e65100 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(255, 143, 0, 0.8);
+      }
+      .altar-tier-1 {
+        width: 45%;
+      }
+      .accordion-button {
+        background: 0;
+        border: 0;
+        box-shadow: none;
+        color: #f0f0f0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .level-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e0b0ff;
+      }
+      .marigold-line {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .marigold-line span {
+        display: inline-block;
+        margin: 0 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url("./static/marygold.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .accordion-body {
+        text-align: left;
+      }
+      .accordion-collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
     </style>
     <link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'" />
   </head>
   <body>
     <div class="container py-5 text-center">
-      <h1 class="mb-4 fw-bold" style="color: #f8e546">
-        Altar Digital de la Maestra Cuquita
-      </h1>
-      <p class="mb-5" style="color: #f8e546">
-        Un homenaje en línea que celebra su vida y memoria.
-      </p>
+        <h1 class="mb-4 fw-bold" style="color: #f8e546">
+          Altar Digital de la Maestra Cuquita
+        </h1>
+        <p class="mb-5" style="color: #f8e546">
+          Un homenaje en línea que celebra su vida y memoria.
+        </p>
 
-      <div class="accordion">
-        <!-- Nivel 1 -->
-        <div class="marigold-line"><span></span><span></span><span></span></div>
-        <div class="altar-level altar-tier-1">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button">
-                <span class="level-title">Recuerdos</span>
-              </button>
-            </h2>
-            <div class="accordion-collapse">
-              <div class="accordion-body">
-                <img src="static/image0.jpg" alt="Imagen de la maestra" style="width:100%; max-width:300px; border-radius:10px;">
-                <p>Foto de la maestra.</p>
+        <div class="accordion">
+            <!-- Nivel 1 -->
+            <div class="marigold-line"><span></span><span></span><span></span></div>
+            <div class="altar-level altar-tier-1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button">
+                    <span class="level-title">Recuerdos</span>
+                  </button>
+                </h2>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <img
+                      src="static/placeholder.jpg"
+                      alt="Imagen de la maestra"
+                      style="width: 100%; max-width: 300px; border-radius: 10px"
+                    />
+                    <p>Imagen de la maestra.</p>
+                    <img
+                      src="static/placeholder2.png"
+                      alt="Imagen de la maestra"
+                      style="width: 100%; max-width: 300px; border-radius: 10px"
+                    />
+                    <p>Imagen de la maestra.</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
         <!-- Nivel 2 -->
         <div class="marigold-line">
@@ -84,6 +168,7 @@
             <div class="accordion-collapse">
               <div class="accordion-body">
                 <p>María del Refugio Carbajal Uribe fue una maestra ejemplar originaria de El Grullo, Jalisco. Dedicó toda su vida a la enseñanza, especialmente en las áreas de mecanografía y taquigrafía, formando generaciones de estudiantes con paciencia, disciplina y cariño. Su vocación docente la llevó a trabajar durante décadas en el Colegio Occidental y el Instituto Forja, instituciones educativas de gran tradición en su comunidad.</p>
+                <p>Con el paso del tiempo, su compromiso y liderazgo la convirtieron en coordinadora general de ambos planteles, supervisando las áreas de preescolar, primaria y secundaria. Su presencia fue constante en la vida escolar del municipio, donde siempre se destacó por su entrega, su carácter sereno y su amor por la enseñanza.</p>
               </div>
             </div>
           </div>
@@ -104,6 +189,8 @@
               <div class="accordion-body">
                 <p>Reconocimientos: En marzo de 2022, el Gobierno Municipal de El Grullo le otorgó el Galardón Musas “Mujeres que Inspiran”, en reconocimiento a su trayectoria y su impacto en la educación local. Este homenaje la destacó como una de las mujeres más influyentes en la formación académica y humana de su comunidad.</p> 
                 <p>Legado: Para sus alumnos, la Mtra. Cuquita fue mucho más que una profesora. Fue una guía, una figura de respeto y afecto, y una inspiración para seguir aprendiendo con esfuerzo y constancia. Su enseñanza no solo abarcó las teclas de una máquina de escribir, sino también los valores del trabajo, la responsabilidad y la gratitud.</p>
+                <p>Despedida: Su misa de cuerpo presente se celebró el 1 de diciembre de 2025, acompañada por familiares, amigos, exalumnos y colegas que reconocieron en ella una vida dedicada al servicio educativo.</p>
+                <p>Su legado permanece vivo en cada palabra escrita, en cada estudiante formado bajo su guía y en la historia misma de la escuela que tanto amó.</p>
               </div>
             </div>
           </div>
@@ -119,7 +206,8 @@
           button.classList.toggle("active");
 
           if (button.classList.contains("active")) {
-            accordionCollapse.style.maxHeight = accordionCollapse.scrollHeight + "px";
+            accordionCollapse.style.maxHeight =
+              accordionCollapse.scrollHeight + "px";
           } else {
             accordionCollapse.style.maxHeight = 0;
           }
