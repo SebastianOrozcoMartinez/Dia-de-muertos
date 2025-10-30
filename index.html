@@ -4,113 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Altar Digital - Maestra Cuquita</title>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="preload" href="./static/marygold.webp" as="image" />
     <style>
-      body{background-color:#2c003e;font-family:'Poppins',sans-serif;color:#f0f0f0}.container{text-align:center}.container h1,.container p{text-shadow:0 0 10px #f8e546,0 0 20px #f8e546,0 0 30px #f8e546}.altar-level{border:3px solid #6a1b9a;border-radius:20px 20px 0 0;margin:1rem auto;transition:transform .3s ease,background-color .3s ease;background-color:#4a148c;box-shadow:0 4px 15px rgba(0,0,0,0.4);cursor:pointer;position:relative;overflow:hidden}.altar-level::before{content:'';position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:40px;height:20px;background:radial-gradient(circle,#ff8f00 0,#e65100 100%);border-radius:50%;box-shadow:0 0 20px rgba(255,143,0,0.8)}.altar-tier-1{width:45%}.accordion-button{background:0;border:0;box-shadow:none;color:#f0f0f0;width:100%;text-align:center;padding:1rem;font-size:1.5rem;font-weight:bold;cursor:pointer}.level-title{font-size:1.5rem;font-weight:bold;color:#e0b0ff}.marigold-line{display:flex;justify-content:center;margin-bottom:.5rem}.marigold-line span{display:inline-block;margin:0 5px;width:20px;height:20px;background-image:url("./static/marygold.webp");background-size:contain;background-repeat:no-repeat;background-position:center}.accordion-body{text-align:left}
-.accordion-collapse {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
+      body {
+        background-color: #2c003e;
+        font-family: "Poppins", sans-serif;
+        color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+      }
+      .container h1,
+      .container p {
+        text-shadow:
+          0 0 10px #f8e546,
+          0 0 20px #f8e546,
+          0 0 30px #f8e546;
+      }
+      .altar-level {
+        border: 3px solid #6a1b9a;
+        border-radius: 20px 20px 0 0;
+        margin: 1rem auto;
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease;
+        background-color: #4a148c;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .altar-level::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 20px;
+        background: radial-gradient(circle, #ff8f00 0, #e65100 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(255, 143, 0, 0.8);
+      }
+      .altar-tier-1 {
+        width: 45%;
+      }
+      .accordion-button {
+        background: 0;
+        border: 0;
+        box-shadow: none;
+        color: #f0f0f0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .level-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e0b0ff;
+      }
+      .marigold-line {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .marigold-line span {
+        display: inline-block;
+        margin: 0 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url("./static/marygold.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .accordion-body {
+        text-align: left;
+      }
+      .accordion-collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
     </style>
     <link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'" />
   </head>
   <body>
     <div class="container py-5 text-center">
-      <h1 class="mb-4 fw-bold" style="color: #f8e546">
-        Altar Digital de la Maestra Cuquita
-      </h1>
-      <p class="mb-5" style="color: #f8e546">
-        Un homenaje en línea que celebra su vida y memoria.
-      </p>
+        <h1 class="mb-4 fw-bold" style="color: #f8e546">
+          Altar Digital de la Maestra Cuquita
+        </h1>
+        <p class="mb-5" style="color: #f8e546">
+          Un homenaje en línea que celebra su vida y memoria.
+        </p>
 
-      <div class="accordion">
-        <!-- Nivel 1 -->
-        <div class="marigold-line"><span></span><span></span><span></span></div>
-        <div class="altar-level altar-tier-1">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button">
-                <span class="level-title">Recuerdos</span>
-              </button>
-            </h2>
-            <div class="accordion-collapse">
-              <div class="accordion-body">
-                <img src="static/images.jpg" alt="Imagen de la maestra" style="width:100%; max-width:300px; border-radius:10px;">
-                <p>Imagen de la maestra.</p>
-                <img src="static/imagenchida.png" alt="Imagen de la maestra" style="width:100%; max-width:300px; border-radius:10px;">
-                <p>Imagen de la maestra.</p>
+        <div class="accordion">
+            <!-- Nivel 1 -->
+            <div class="marigold-line"><span></span><span></span><span></span></div>
+            <div class="altar-level altar-tier-1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button">
+                    <span class="level-title">Recuerdos</span>
+                  </button>
+                </h2>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <img
+                      src="static/images.jpg"
+                      alt="Imagen de la maestra"
+                      style="width: 100%; max-width: 300px; border-radius: 10px"
+                    />
+                    <p>Imagen de la maestra.</p>
+                    <img
+                      src="static/imagenchida.png"
+                      alt="Imagen de la maestra"
+                      style="width: 100%; max-width: 300px; border-radius: 10px"
+                    />
+                    <p>Imagen de la maestra.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- Nivel 2 -->
+          <div class="marigold-line">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="altar-level altar-tier-2">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button">
+                  <span class="level-title">Gustos</span>
+                </button>
+              </h2>
+              <div class="accordion-collapse">
+                <div class="accordion-body">
+                  <p>Gusto de la maestra.</p>
+                  <p>Gusto de la maestra.</p>
+                  <p>Gusto de la maestra.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nivel 3 -->
+          <div class="marigold-line">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="altar-level altar-tier-3">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button">
+                  <span class="level-title">Nivel sin usar</span>
+                </button>
+              </h2>
+              <div class="accordion-collapse">
+                <div class="accordion-body">
+                  <p>A</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nivel 4 -->
+          <div class="marigold-line">
+            <span></span><span></span><span></span><span></span><span></span
+            ><span></span>
+          </div>
+          <div class="altar-level altar-tier-4">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button">
+                  <span class="level-title">Historia</span>
+                </button>
+              </h2>
+              <div class="accordion-collapse">
+                <div class="accordion-body">
+                  <p>
+                    La historia de vida de la maestra Cuquita muestra la condición
+                    de género que les tocó vivir a las mujeres de la segunda mitad
+                    del siglo XX, pero, también, evidencia los logros de la lucha
+                    de las feministas mexicanas para que la mujer tuviera acceso a
+                    la educación.
+                  </p>
+                  <p>
+                    Desde el siglo XVII, durante la época colonial, Sor Juana Inés
+                    de la Cruz (1648-1695) alzó la voz y exigió educación
+                    igualitaria; sin embargo, su sueño se empezaría a gestar hasta
+                    el siglo XVIII, cuando los independentistas empezaron a crear
+                    varias instituciones de educación básica con la finalidad de
+                    formar las mejores madres, esposas, artesanas y profesoras de
+                    educación básica, visión que prevalecería hasta el siglo XX
+                    (Macías, 1982/2002).
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Nivel 2 -->
-        <div class="marigold-line">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="altar-level altar-tier-2">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button">
-                <span class="level-title">Gustos</span>
-              </button>
-            </h2>
-            <div class="accordion-collapse">
-              <div class="accordion-body">
-                <p>Gusto de la maestra.</p>
-                <p>Gusto de la maestra.</p>
-                <p>Gusto de la maestra.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nivel 3 -->
-        <div class="marigold-line">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="altar-level altar-tier-3">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button">
-                <span class="level-title">Nivel sin usar</span>
-              </button>
-            </h2>
-            <div class="accordion-collapse">
-              <div class="accordion-body">
-                <p>A</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nivel 4 -->
-        <div class="marigold-line">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="altar-level altar-tier-4">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button">
-                <span class="level-title">Historia</span>
-              </button>
-            </h2>
-            <div class="accordion-collapse">
-              <div class="accordion-body">
-                <p>La historia de vida de la maestra Cuquita muestra la condición de género que les tocó vivir a las mujeres de la segunda mitad del siglo XX, pero, también, evidencia los logros de la lucha de las feministas mexicanas para que la mujer tuviera acceso a la educación.</p>
-                <p>Desde el siglo XVII, durante la época colonial, Sor Juana Inés de la Cruz (1648-1695) alzó la voz y exigió educación igualitaria; sin embargo, su sueño se empezaría a gestar hasta el siglo XVIII, cuando los independentistas empezaron a crear varias instituciones de educación básica con la finalidad de formar las mejores madres, esposas, artesanas y profesoras de educación básica, visión que prevalecería hasta el siglo XX (Macías, 1982/2002).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script>
@@ -121,7 +219,8 @@
           button.classList.toggle("active");
 
           if (button.classList.contains("active")) {
-            accordionCollapse.style.maxHeight = accordionCollapse.scrollHeight + "px";
+            accordionCollapse.style.maxHeight =
+              accordionCollapse.scrollHeight + "px";
           } else {
             accordionCollapse.style.maxHeight = 0;
           }
